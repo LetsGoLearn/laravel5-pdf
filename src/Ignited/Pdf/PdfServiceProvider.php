@@ -21,7 +21,7 @@ class PdfServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->app->singleton('pdf', function ($app) {
-			$config = config('laravel-pdf');
+			$config = config('pdf-factory');
 
 			if(!$config || !$config['bin'])
 			{
@@ -52,3 +52,4 @@ class PdfServiceProvider extends ServiceProvider {
 	}
 
 }
+
